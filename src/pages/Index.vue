@@ -14,6 +14,7 @@
               outlined
               label="Name"
               placeholder="John Smith"
+              v-model="name"
             />
             <q-input
               standout="text-white"
@@ -22,6 +23,7 @@
               label="Email"
               type="email"
               placeholder="example@example.com"
+              v-model="email"
             />
             <q-input
               standout="text-white"
@@ -30,6 +32,7 @@
               label="Address"
               type="address"
               placeholder="512 16th Street"
+              v-model="address"
             />
             <q-input
               standout="text-white"
@@ -37,6 +40,7 @@
               outlined
               label="City"
               placeholder="New York"
+              v-model="city"
             />
             <div>
               <div class="row q-col-gutter-md">
@@ -47,6 +51,7 @@
                     outlined
                     label="State"
                     placeholder="NY"
+                    v-model="state"
                   />
                 </div>
                 <div class="col-6">
@@ -56,6 +61,7 @@
                     outlined
                     label="Zip"
                     placeholder="22015"
+                    v-model="zip"
                   />
                 </div>
               </div>
@@ -85,6 +91,7 @@
               outlined
               label="Name on Card"
               placeholder="John Smith"
+              v-model="ccname"
             />
             <q-input
               standout="text-white"
@@ -93,6 +100,7 @@
               label="Credit Card Number"
               mask="#### #### #### ####"
               placeholder="1111 1111 1111 1111"
+              v-model="ccnumber"
             />
             <q-input
               standout="text-white"
@@ -101,6 +109,7 @@
               label="Expiry Month"
               type="text"
               placeholder="October"
+              v-model="ccmonth"
             />
             <div>
               <div class="row q-col-gutter-md">
@@ -113,6 +122,7 @@
                     type="year"
                     mask="####"
                     placeholder="2026"
+                    v-model="ccyear"
                   />
                 </div>
                 <div class="col-6">
@@ -124,6 +134,7 @@
                     mask="###"
                     label="CVV"
                     placeholder="013"
+                    v-model="cccvc"
                   />
                 </div>
               </div>
@@ -152,7 +163,19 @@ export default defineComponent({
   name: 'PageIndex',
   components: {},
   setup() {
-    return {};
+    return {
+      name: ref(''),
+      email: ref(''),
+      address: ref(''),
+      city: ref(''),
+      state: ref(''),
+      zip: ref(''),
+      ccname: ref(''),
+      ccnumber: ref(''),
+      ccmonth: ref(''),
+      ccyear: ref(''),
+      cccvc: ref(''),
+    };
   },
 });
 </script>
