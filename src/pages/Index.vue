@@ -30,7 +30,6 @@
               dark
               outlined
               label="Address"
-              type="address"
               placeholder="512 16th Street"
               v-model="address"
             />
@@ -77,11 +76,7 @@
               <div id="cc" class="row q-gutter-md">
                 <q-icon name="fab fa-cc-visa" color="indigo-10" size="lg" />
                 <q-icon name="fab fa-cc-mastercard" color="red-10" size="lg" />
-                <q-icon
-                  name="fab fa-cc-amex"
-                  color="deep-purple-10"
-                  size="lg"
-                />
+                <q-icon name="fab fa-cc-amex" color="deep-purple-10" size="lg" />
                 <q-icon name="fab fa-cc-discover" color="orange-10" size="lg" />
               </div>
             </div>
@@ -107,8 +102,8 @@
               dark
               outlined
               label="Expiry Month"
-              type="text"
-              placeholder="October"
+              mask=" ##"
+              placeholder="02"
               v-model="ccmonth"
             />
             <div>
@@ -119,8 +114,7 @@
                     dark
                     outlined
                     label="Expiry Year"
-                    type="year"
-                    mask="####"
+                    mask=" ####"
                     placeholder="2026"
                     v-model="ccyear"
                   />
@@ -130,8 +124,7 @@
                     standout="text-white"
                     dark
                     outlined
-                    type="number"
-                    mask="###"
+                    mask=" ###"
                     label="CVV"
                     placeholder="013"
                     v-model="cccvc"
@@ -143,14 +136,7 @@
         </q-card-section>
       </q-card-section>
       <q-card-actions vertical>
-        <q-btn
-          unelevated
-          rounded
-          outline
-          size="lg"
-          label="checkout"
-          class="full-width"
-        />
+        <q-btn unelevated rounded outline size="lg" label="checkout" class="full-width" />
       </q-card-actions>
     </q-card>
   </q-page>
